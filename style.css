@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* Soft sage green background */
+    background: #b8c99c;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+/* 🎨 DUMBBELL & FITNESS DECORATIONS */
+/* Left dumbbell */
+body::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 140px;
+    height: 80px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 60' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='10' y='20' width='25' height='20' rx='4'/%3E%3Crect x='5' y='15' width='12' height='30' rx='3'/%3E%3Crect x='110' y='20' width='25' height='20' rx='4'/%3E%3Crect x='123' y='15' width='12' height='30' rx='3'/%3E%3Crect x='40' y='27' width='60' height='6' rx='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+    pointer-events: none;
+}
+/* Right dumbbell */
+body::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    width: 140px;
+    height: 80px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 60' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='10' y='20' width='25' height='20' rx='4'/%3E%3Crect x='5' y='15' width='12' height='30' rx='3'/%3E%3Crect x='110' y='20' width='25' height='20' rx='4'/%3E%3Crect x='123' y='15' width='12' height='30' rx='3'/%3E%3Crect x='40' y='27' width='60' height='6' rx='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+    pointer-events: none;
+}
+/* Bottom left weight plate */
+.weight-plate-left {
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    width: 180px;
+    height: 180px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23ffffff' stroke-width='1.5' opacity='0.4'%3E%3Ccircle cx='50' cy='50' r='45'/%3E%3Ccircle cx='50' cy='50' r='35'/%3E%3Ccircle cx='50' cy='50' r='25'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23b8c99c'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+}
+/* Bottom right weight plate */
+.weight-plate-right {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    width: 180px;
+    height: 180px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23ffffff' stroke-width='1.5' opacity='0.4'%3E%3Ccircle cx='50' cy='50' r='45'/%3E%3Ccircle cx='50' cy='50' r='35'/%3E%3Ccircle cx='50' cy='50' r='25'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23b8c99c'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+}
+/* Small extra dumbbell */
+.small-dumbbell {
+    position: absolute;
+    bottom: 25%;
+    left: 15%;
+    width: 50px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 30' fill='none' stroke='%23ffffff' stroke-width='1.5' opacity='0.4'%3E%3Crect x='5' y='10' width='12' height='10' rx='2'/%3E%3Crect x='53' y='10' width='12' height='10' rx='2'/%3E%3Crect x='20' y='13' width='30' height='4' rx='1'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+}
+.small-dumbbell-2 {
+    position: absolute;
+    bottom: 30%;
+    right: 15%;
+    width: 40px;
+    height: 25px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 30' fill='none' stroke='%23ffffff' stroke-width='1.5' opacity='0.4'%3E%3Crect x='5' y='10' width='12' height='10' rx='2'/%3E%3Crect x='53' y='10' width='12' height='10' rx='2'/%3E%3Crect x='20' y='13' width='30' height='4' rx='1'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+}
+/* Main calculator card */
+.container {
+    background: rgba(230, 240, 210, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 35px 30px;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(90, 110, 60, 0.15);
+    width: 100%;
+    max-width: 360px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 10;
+}
+h1 {
+    text-align: center;
+    color: #4a602e;
+    margin-bottom: 28px;
+    font-weight: 700;
+    font-size: 24px;
+}
+label {
+    display: block;
+    margin: 16px 0 8px;
+    font-weight: 500;
+    color: #5a7038;
+    font-size: 14px;
+}
+input {
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 999px;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #3a4a28;
+    transition: all 0.3s ease;
+    outline: none;
+}
+input::placeholder {
+    color: #9eb87c;
+}
+input:focus {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 0 2px rgba(114, 144, 60, 0.3);
+}
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 24px;
+    background: linear-gradient(90deg, #90c970, #7bc8b0);
+    color: #2f4020;
+    border: none;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(114, 160, 80, 0.25);
+}
+#result {
+    margin-top: 20px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 18px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #3a4a28;
+    text-align: center;
+}
